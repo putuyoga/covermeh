@@ -23,7 +23,8 @@
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test",
-        "build": "make"
+        "build": "make",
+        "build:watch": "make watch"
     },
     "dependencies": {
         "babel-runtime": "^6.9.2",

@@ -1,9 +1,10 @@
 all:
 	@babel extension.js --out-file extension.compiled.js --source-maps true
-	@echo built
+	@echo this trash is built
 
 watch:
-	watch-run -i -p "extension.compiled.js" -- make all
+	@echo start watching your sin
+	@babel extension.js --watch --out-file extension.compiled.js --source-maps true
 
 clean:
 	rm -rf out/
