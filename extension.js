@@ -1,17 +1,17 @@
-import { commands, window, StatusBarAlignment } from 'vscode';
+import * as vscode from 'vscode';
 
 export const activate = (context) => {
     console.log('Covermeh activated!');
 
-    const statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
+    const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
     
-    var disposable = commands.registerCommand('extension.sayHello', function () {
+    const disposable = vscode.commands.registerCommand('extension.sayHello', function () {
         const output = 'testMeh';
-        window.showInformationMessage(testMeh);
+        vscode.window.showInformationMessage(testMeh);
     });
     
     context.subscriptions.push(disposable);
-}
+};
 
 // this method is called when your extension is deactivated
 export const deactivate = () => {
